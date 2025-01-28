@@ -1,2 +1,2 @@
-# MLB Fantasy 2024 Analysis
+# MLB Fantasy 2025 Analysis
 More to come...
