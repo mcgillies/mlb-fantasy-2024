@@ -1,2 +1,3 @@
 # MLB Fantasy 2025 Analysis
+Intended for ESPN points leagues - to convert to other leagues just change the scoring calculation in (data_cleaning/calc_fpoints.py)
 More to come...
