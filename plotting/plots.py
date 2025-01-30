@@ -1,9 +1,9 @@
 import seaborn as sns
 from pandas.plotting import scatter_matrix
 
-def plot_top_x_corr(data, num, type):
+def plot_top_x_corr(data, num, type, col):
 
-    correlations = data.corr()['Fpoints_G'].abs().sort_values(ascending=False)
+    correlations = data.corr()[col].abs().sort_values(ascending=False)
     top_cols = correlations.iloc[1:num].index  
     if type == "scatter":
         scatter_matrix(data[top_cols], figsize=(12, 12), diagonal='kde', alpha=0.5)
