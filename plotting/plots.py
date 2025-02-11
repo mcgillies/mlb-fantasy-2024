@@ -10,5 +10,6 @@ def plot_top_x_corr(data, num, type, col):
         scatter_matrix(data[top_cols], figsize=(12, 12), diagonal='kde', alpha=0.5)
     elif type == "correlation":
         sns.heatmap(data[top_cols].corr(), annot=True, fmt=".2f", cmap="coolwarm", linewidths=0.5)
+    else: 
         raise Exception("This is not a valid type")
         Exception("This is not a valid type")
