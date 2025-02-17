@@ -3,7 +3,7 @@ Data taken from Baseball Savant.
 
 Intended for ESPN points leagues - to convert to other leagues just change the scoring calculation in [this file](data_cleaning/calc_fpoints.py).
 
-Current pitcher rankings [here](predictions/initial_pitcher_preds.csv)
+Current pitcher rankings [here](predictions/initial_picher_preds.csv)
 
 
 More to come...
