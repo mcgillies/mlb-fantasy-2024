@@ -1,4 +1,5 @@
 import pandas as pd
+import unidecode
 
 def combine_metrics_stats(stats, metrics, save=True):
     """Combined the metrics from the previous year with the fantasy points - to predict fantasy points from previous 
@@ -14,6 +15,9 @@ def combine_metrics_stats(stats, metrics, save=True):
     """
 
     metrics = metrics.rename(columns = {'last_name, first_name':'Name'})
+    name_split = metrics['Name'].str.split(', ', expand=True)
+    metrics['Name'] = name_split[1] + ' ' + name_split[0]
+    metrics['Name'] = metrics['Name'].apply(unidecode.unidecode)
     metrics = metrics.drop(columns = ['player_id'])
     metrics['year'] = metrics['year'] + 1
     # metrics = metrics[metrics['year'] < 2024]
@@ -39,6 +43,9 @@ def pitch_combine_metrics_stats(stats, metrics, save = True):
         _type_: dataframe containing pitcher metrics and fantasy points
     """
     metrics = metrics.rename(columns = {'last_name, first_name':'Name'})
+    name_split = metrics['Name'].str.split(', ', expand=True)
+    metrics['Name'] = name_split[1] + ' ' + name_split[0]
+    metrics['Name'] = metrics['Name'].apply(unidecode.unidecode)
     metrics = metrics.drop(columns = ['player_id'])
     metrics['year'] = metrics['year'] + 1
     # metrics = metrics[metrics['year'] < 2024]
