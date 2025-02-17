@@ -16,8 +16,8 @@ def combine_metrics_stats(stats, metrics, save=True):
     metrics = metrics.rename(columns = {'last_name, first_name':'Name'})
     metrics = metrics.drop(columns = ['player_id'])
     metrics['year'] = metrics['year'] + 1
-    metrics = metrics[metrics['year'] < 2024]
-    stats = stats[stats['year'] > 2015]
+    # metrics = metrics[metrics['year'] < 2024]
+    # stats = stats[stats['year'] > 2015]
     fpts = stats[['Name','Fpoints_G', 'year', 'age']]
     both = fpts.merge(metrics, on = ['Name', 'year'])
 
@@ -41,8 +41,8 @@ def pitch_combine_metrics_stats(stats, metrics, save = True):
     metrics = metrics.rename(columns = {'last_name, first_name':'Name'})
     metrics = metrics.drop(columns = ['player_id'])
     metrics['year'] = metrics['year'] + 1
-    metrics = metrics[metrics['year'] < 2024]
-    stats = stats[stats['year'] > 2015]
+    # metrics = metrics[metrics['year'] < 2024]
+    # stats = stats[stats['year'] > 2015]
     fpts = stats[['Name','Fpoints_IP', 'year', 'age']]
     both = fpts.merge(metrics, on = ['Name', 'year'])
     if save:
