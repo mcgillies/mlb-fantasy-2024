@@ -8,12 +8,12 @@ chapters:
   - file: predictions_and_analysis  # Now this file exists
     sections:
       - file: Catchers
-      - file: First Basemen
-      - file: Second Basemen
-      - file: Third Basemen
+      - file: First_Basemen
+      - file: Second_Basemen
+      - file: Third_Basemen
       - file: Shortstops
       - file: Outfielders
-      - file: Starting Pitchers
-      - file: Relief Pitchers
+      - file: Starting_Pitchers
+      - file: Relief_Pitchers
 
 
