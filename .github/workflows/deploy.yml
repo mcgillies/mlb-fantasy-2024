@@ -5,32 +5,35 @@ on:
     branches:
       - main  # Change if your default branch is different
 
+  workflow_dispatch:  # Allows manual runs from GitHub Actions UI
+
+permissions:
+  contents: read  # Read repository contents
+  pages: write  # Allows publishing to GitHub Pages
+  id-token: write  # Required for authentication to GitHub Pages
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: '3.9'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install requirements.txt
 
       - name: Build Jupyter Book
-        run: jupyter-book build mlb-book
+        run: |
+          jupyter-book build mlb-book
 
-    # Upload the book's HTML as an artifact
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "mlb-book/_build/html"
-
-            # Deploy the book's HTML to GitHub Pages
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        run: |
+          ghp-import -n -p -f mlb-book/_build/html
+
 
