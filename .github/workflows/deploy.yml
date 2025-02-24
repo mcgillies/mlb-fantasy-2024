@@ -18,14 +18,14 @@ jobs:
           python-version: "3.9"
 
       - name: Install dependencies
-        run: pip install jupyter-book
+        run: pip install -r requirements.txt
 
       - name: Build Jupyter Book
         run: jupyter-book build mlb-book
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+    # Upload the book's HTML as an artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.NEW_TOKEN }}
-          publish_dir: mlb-book/_build/html
+          path: "mlb-book/_build/html"
 
