@@ -8,7 +8,7 @@ on:
   workflow_dispatch:  # Allows manual runs from GitHub Actions UI
 
 permissions:
-  contents: read  # Read repository contents
+  contents: write  # Read repository contents
   pages: write  # Allows publishing to GitHub Pages
   id-token: write  # Required for authentication to GitHub Pages
 
@@ -32,7 +32,15 @@ jobs:
         run: |
           jupyter-book build mlb-book
 
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+  
       - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.NEW_TOKEN }}
         run: |
           ghp-import -n -p -f mlb-book/_build/html
 
