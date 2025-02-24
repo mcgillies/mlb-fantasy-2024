@@ -2,7 +2,7 @@
 
 It is almost time for baseball season. Return of the nerds unite. 
 
-I have created a set of predictions designed for my fantasy baseball league, an ESPN hosted 12 team points league. The easy and likely more reliable approach would be to simply convert one of the many projection systems on Fangraphs into fantasy points, however I wanted to take my own approach. The scoring for players works as follows:
+I have created a set of predictions designed for my fantasy baseball league, an ESPN hosted 12 team points league. The easy and likely more reliable approach would be to simply convert one of the many projection systems on Fangraphs into fantasy points, however I wanted to take my own path. The scoring for players works as follows:
 
 Pitchers:
     + 3 per IP (+ 1 per out)
