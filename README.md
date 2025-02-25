@@ -1,15 +1,37 @@
 # MLB Fantasy 2025 Analysis
-Data taken from Baseball Savant. 
+Full report can be found [here](https://mcgillies.github.io/mlb-fantasy-2025/intro.html)
 
-Intended for ESPN points leagues - to convert to other leagues just change the scoring calculation in [this file](data_cleaning/calc_fpoints.py).
+Rankings are found in the [predictions folder](predictions/)
 
-Current full rankings [here](predictions/initial_all_preds.csv)
+## 📖 View the Jupyter Book Locally
 
-Current Hitter rankings [here](predictions/initial_batter_preds.csv)
+To build and view the Jupyter Book on your local machine, follow these steps:
 
-Current pitcher rankings [here](predictions/initial_picher_preds.csv)
+### 1. Clone the Repository
+```sh
+git clone https://github.com/mcgillies/mlb-fantasy-2025.git
+cd mlb-fantasy-2025
+```
 
-proj_fpoints_skill does not include "team" stats (Wins, Losses, Saves, Holds) while proj_fpoints does. For the "skill" based metric comparisons should only be made between pitchers of the same role (ie. relievers vs starters). 
+### 2. Create Environment (Optional)
+```sh
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate     # On Windows
+```
+### 3. Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+### 4. Build the Jupyter Book
+```sh
+jupyter-book build mlb-book
+```
+
+### 5. Open the Jupyter Book by pasting the provided link into a web browser. 
 
 
-More to come...
+## Producing LIME (explanation) plots for other players can be done at the end of the [batter](batter_main.ipynb) and [pitcher](pitcher_main.ipynb) notebooks. 
+
+
