@@ -3,6 +3,8 @@ Full report can be found [here](https://mcgillies.github.io/mlb-fantasy-2025/int
 
 Rankings are found in the [predictions folder](predictions/)
 
+Hoping to add a few more things before the season begins...
+
 ## 📖 View the Jupyter Book Locally
 
 To build and view the Jupyter Book on your local machine, follow these steps:
