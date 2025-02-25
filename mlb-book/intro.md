@@ -9,37 +9,37 @@ The scoring system we are playing on works as follows:
 
 Pitchers:
 
- -   + 3 per IP (+ 1 per out)
+ -    3 per IP (+ 1 per out)
 
- -   + 1 per K
+ -    1 per K
 
- -   - 1 per BB
+ -   -1 per BB
 
- -   - 1 per Hit
+ -   -1 per Hit
 
- -  - 2 per ER
+ -   -2 per ER
 
- -    + 2 per Win
+ -    2 per Win
 
- -    - 2 per Loss
+ -   -2 per Loss
 
- -    + 2 per Hold
+ -    2 per Hold
 
- -   + 5 per Save
+ -    5 per Save
 
 
 Batters:
- -   + 1 per TB
+ -   1 per TB
 
- -   + 1 per R
+ -   1 per R
 
- -   + 1 per RBI
+ -   1 per RBI
 
- -   + 1 per BB
+ -   1 per BB
 
- -   + 1 per SB
+ -   1 per SB
 
- -   - 1 per K
+ -   -1 per K
 
 
 The scoring can be edited in [here](https://github.com/mcgillies/mlb-fantasy-2025/blob/main/data_cleaning/calc_fpoints.py) if you are playing under a different scoring system. Although this is designed for fantasy purposes, it can still generally be applied for overall player value (minus defence). Batter fantasy score can be interpreted as an overarching offensive stat, while pitcher fantasy points function similarly, but to a lesser extent as "team" related stats such as Wins, Losses, Holds, and Saves are more prevalent. Keep in mind this definition of "team stats" as I will use it throughout. 
